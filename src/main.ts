@@ -15,7 +15,8 @@ async function bootstrap() {
 
   app.useGlobalPipes(new ValidationPipe());
 
-  const port = parseInt(process.env.PORT || '3000', 10);
-  await app.listen(port);
+  const port = parseInt(process.env.PORT ?? '13000', 10);
+  console.log(`🚀 Nest application listening on port ${port}`);
+  await app.listen(port, '0.0.0.0');
 }
 bootstrap();
