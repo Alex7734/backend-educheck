@@ -14,7 +14,7 @@ async function bootstrap() {
   app.useGlobalInterceptors(new ClassSerializerInterceptor(reflector));
 
   app.useGlobalPipes(new ValidationPipe());
-  
+
   await app.listen(13000);
 }
 bootstrap();
